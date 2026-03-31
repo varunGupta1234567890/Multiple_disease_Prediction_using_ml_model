@@ -3,12 +3,10 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-# ------------------ PAGE CONFIG ------------------
 st.set_page_config(page_title="Health Assistant",
                    layout="wide",
                    page_icon="🧑‍⚕")
 
-# ------------------ CUSTOM CSS ------------------
 st.markdown("""
 <style>
 .stButton>button {
@@ -21,7 +19,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ------------------ LOAD MODELS ------------------
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
 @st.cache_resource
@@ -39,7 +36,6 @@ def load_models():
 
 diabetes_model, heart_model, parkinson_model = load_models()
 
-# ------------------ SIDEBAR ------------------
 with st.sidebar:
     selected = option_menu(
         '🧑‍⚕ Health Assistant',

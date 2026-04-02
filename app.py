@@ -49,7 +49,7 @@ with st.sidebar:
 
 st.sidebar.success("Select a prediction type")
 
-# ================== DIABETES ==================
+# ================== DIABETES Prediction ==================
 if selected == 'Diabetes Prediction':
 
     st.title('🩺 Diabetes Prediction')
@@ -81,7 +81,7 @@ if selected == 'Diabetes Prediction':
         else:
             st.success(" Not Diabetic")
 
-# ================== HEART ==================
+# ================== HEART Disease Prediction ==================
 if selected == 'Heart Disease Prediction':
 
     st.title('❤️ Heart Disease Prediction')
@@ -122,10 +122,10 @@ if selected == 'Heart Disease Prediction':
         else:
             st.success(" Healthy Heart")
 
-# ================== PARKINSON ==================
+# ================== PARKINSON Disease Prediction ==================
 if selected == "parkinson Prediction":
 
-    st.title("🧠 Parkinson's Prediction")
+    st.title("🧠 Parkinson's Disease Prediction")
 
     features_info = {
         "Fo": "Voice ka base frequency (Hz)",

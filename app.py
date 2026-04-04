@@ -77,7 +77,7 @@ if selected == 'Diabetes Prediction':
         result = diabetes_model.predict([inputs])
 
         if result[0] == 1:
-            st.error("⚠️ Diabetic")
+            st.warning("Diabetes Risk Detected. Please consult a doctor.")
         else:
             st.success(" Not Diabetic")
 
@@ -118,7 +118,7 @@ if selected == 'Heart Disease Prediction':
         result = heart_model.predict([inputs])
 
         if result[0] == 1:
-            st.error("⚠️ Heart Disease Detected")
+            st.warning("Heart Disease Risk Detected. Please consult a doctor.")
         else:
             st.success(" Healthy Heart")
 
@@ -171,11 +171,11 @@ if selected == "parkinson Prediction":
         for k, v in features_info.items():
             st.write(f"**{k}**: {v}")
 
-    if st.button("🔍 Predict Parkinson's"):
+    if st.button("Predict Parkinson's"):
 
         result = parkinson_model.predict([inputs])
 
         if result[0] == 1:
-            st.error("⚠️ Parkinson's Detected")
+            st.warning("Parkinson Disease Risk Detected. Please consult a doctor.")
         else:
-            st.success(" No Parkinson's")
+            st.success(" No Parkinson's detected")
